@@ -6,4 +6,11 @@ void main() {
     WildDuck().run();
     RubberDuck().run();
   });
+
+  test('description', (){
+    String message = WildDuck().toString();
+    String testMessage = message.split(" ").last.replaceAll("'", "");
+    print(testMessage);
+    expect(testMessage, "WildDuck");
+  });
 }
